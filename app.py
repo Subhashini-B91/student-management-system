@@ -12,10 +12,41 @@ st.markdown("""
     <h1 style='text-align: center; color: #4CAF50;'>
     🎓 Student Management System
     </h1>
-    <p style='text-align: center; font-size:18px; color: gray;'>
-    Manage student records efficiently with a modern interface
-    </p>
     <hr style='border: 1px solid #ddd;'>
+""", unsafe_allow_html=True)
+# ------------------ BACKGROUND STYLE ------------------
+st.markdown("""
+<style>
+/* Main background */
+.stApp {
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #f0f8ff;
+}
+
+/* Card-like sections */
+.block-container {
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    height: 3em;
+    width: 100%;
+}
+
+/* Input fields */
+.stTextInput>div>div>input {
+    border-radius: 8px;
+}
+</style>
 """, unsafe_allow_html=True)
 def load_data():
     try:
