@@ -79,6 +79,36 @@ label, .stTextInput, .stNumberInput {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Selectbox (dropdown menu text) */
+div[data-baseweb="select"] * {
+    color: #2e7d32 !important;
+}
+
+/* Selected value inside selectbox */
+div[data-baseweb="select"] span {
+    color: #2e7d32 !important;
+}
+
+/* Dropdown options */
+ul[role="listbox"] li {
+    color: #2e7d32 !important;
+}
+
+/* Radio buttons (if you use them) */
+div[role="radiogroup"] label {
+    color: #2e7d32 !important;
+}
+
+/* Sidebar selectbox specifically */
+[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #2e7d32 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 def load_data():
     try:
         with open("students.json", "r") as f:
