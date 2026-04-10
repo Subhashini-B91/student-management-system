@@ -48,6 +48,37 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Make all text green */
+html, body, [class*="css"]  {
+    color: #2e7d32 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #2e7d32 !important;
+}
+
+/* Labels and input text */
+label, .stTextInput, .stNumberInput {
+    color: #2e7d32 !important;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] * {
+    color: #2e7d32 !important;
+}
+
+/* Buttons text */
+.stButton>button {
+    color: white !important;
+    background-color: #2e7d32 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 def load_data():
     try:
         with open("students.json", "r") as f:
