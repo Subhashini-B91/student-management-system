@@ -109,6 +109,29 @@ div[role="radiogroup"] label {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Force radio label text to green */
+div[role="radiogroup"] label p {
+    color: #2e7d32 !important;
+    font-weight: 600;
+}
+
+/* Selected option highlight */
+div[role="radiogroup"] > label[data-baseweb="radio"] {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* When selected */
+div[role="radiogroup"] input:checked + div {
+    background-color: #e8f5e9 !important;
+    border-radius: 8px;
+}
+
+</style>
+""", unsafe_allow_html=True)
 def load_data():
     try:
         with open("students.json", "r") as f:
