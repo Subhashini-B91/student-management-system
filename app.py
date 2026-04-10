@@ -1,30 +1,5 @@
 import streamlit as st
 import json
-
-# ------------------ LOGIN ------------------
-USERNAME = "admin"
-PASSWORD = "1234"
-
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
-
-def login():
-    st.title("🔐 Login")
-    user = st.text_input("Username")
-    pwd = st.text_input("Password", type="password")
-
-    if st.button("Login"):
-        if user == USERNAME and pwd == PASSWORD:
-            st.session_state.logged_in = True
-            st.success("Login successful!")
-        else:
-            st.error("Invalid credentials")
-
-if not st.session_state.logged_in:
-    login()
-    st.stop()
-st.title("🎓 Student Management System")
-# ------------------ DATA ------------------
 def load_data():
     try:
         with open("students.json", "r") as f:
