@@ -1,5 +1,22 @@
 import streamlit as st
 import json
+# ------------------ PAGE CONFIG ------------------
+st.set_page_config(
+    page_title="Student Management System",
+    page_icon="🎓",
+    layout="wide"
+)
+
+# ------------------ CUSTOM HEADER ------------------
+st.markdown("""
+    <h1 style='text-align: center; color: #4CAF50;'>
+    🎓 Student Management System
+    </h1>
+    <p style='text-align: center; font-size:18px; color: gray;'>
+    Manage student records efficiently with a modern interface
+    </p>
+    <hr style='border: 1px solid #ddd;'>
+""", unsafe_allow_html=True)
 def load_data():
     try:
         with open("students.json", "r") as f:
